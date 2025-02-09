@@ -3,19 +3,19 @@ on:
   workflow_dispatch:
     inputs:
       name:
-      description: 'set name'
-      required: true
-      default: 'github-actions'
-      type: string
-    environment:
-      description: 'set env'
-      required: true
-      default: 'dev'
-      type: choice
-      options:
-      - dev
-      - qa
-      - prod
+        description: 'set name'
+        required: true
+        default: 'github-actions'
+        type: string
+      environment:
+        description: 'set env'
+        required: true
+        default: 'dev'
+        type: choice
+        options:
+        - dev
+        - qa
+        - prod
 
 jobs:
   workflow-dispatch-job:
@@ -29,5 +29,5 @@ jobs:
         echo github action
     - name: echo inputs
       run: |
-        echo ${{ inputs.name}}
-        echo ${{ inputs.environment}}
+        echo ${{ inputs.name }}
+        echo ${{ inputs.environment }}
