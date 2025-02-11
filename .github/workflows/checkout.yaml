@@ -8,7 +8,7 @@ jobs:
     - name: check file list
       run: cat README.md
   
-  check out:
+  checkout:
     runs-on: ubuntu-latest
     steps:
     - name: use checkout action
