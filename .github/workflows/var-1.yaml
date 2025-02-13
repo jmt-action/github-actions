@@ -26,8 +26,8 @@ jobs:
     steps:
     - name: check env
       run: echo "LEVEL ${{ env.level }}"
-    env:
-      level: step
+      env:
+        level: step
 
   get-env:
     runs-on: ubuntu-latest
