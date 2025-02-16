@@ -6,7 +6,7 @@ on:
         description: 'set repo prefix'
         required: true
         default: 'service'
-        tpye: choice
+        type: choice
         options:
         - example
         - service
