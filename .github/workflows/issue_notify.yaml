@@ -36,7 +36,7 @@ jobs:
     strategy:
       matrix:
         environment: ["${{ needs.get-keyword.outputs.level }}"]
-    environments: ${{ matrix.environment }}
+    environment: ${{ matrix.environment }}
     steps:
     - name: slack
       uses: slackapi/slack-github-action@v1.24.0
