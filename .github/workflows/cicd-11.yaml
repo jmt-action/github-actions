@@ -1,4 +1,4 @@
-name: cicd-1
+name: cicd-11
 on:
   pull_request:
     types: [opened, synchronize, closed]
@@ -57,7 +57,7 @@ jobs:
       run: |
         docker build -f Dockerfile --tag ${{ secrets.REGISTRY }}/${{ vars.REPOSITORY }}:${{ github.sha }} .
         docker push ${{ secrets.REGISTRY }}/${{ vars.REPOSITORY }}:${{ github.sha }}
-  
+      
   deploy:
     runs-on: ubuntu-latest
     needs: [image-build]
