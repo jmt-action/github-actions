@@ -2,20 +2,20 @@ name: workflow-dispatch
 on:
   workflow_dispatch:
     inputs:
-    name:
-      description: 'set name'
-      required: true
-      default: 'github-actions'
-      type: string
-    environment:
-      description: 'set env'
-      required: true
-      default: 'dev'
-      type: choice
-      options:
-      - dev
-      - qa
-      - prod
+      name:
+        description: 'set name'
+        required: true
+        default: 'github-actions'
+        type: string
+      environment:
+        description: 'set env'
+        required: true
+        default: 'dev'
+        type: choice
+        options:
+        - dev
+        - qa
+        - prod
       
 jobs:
   workflow-dispatch-job:
