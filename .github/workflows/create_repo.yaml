@@ -15,15 +15,13 @@ on:
         required: true
         default: 'github-actions'
         type: string
-
-  jobs:
-    create-repo-automation:
-      runs-on: ubuntu-latest
-      steps:
-      - name: gh auth login
-        run: |
-          echo ${{ secrets.PERSONAL_ACCESS_TOKEN }} | gh auth login --with-token
-      - name: create-repo
-        run: |
-          gh repo create jmt-action/${{ inputs.prefix }}-${{ inputs.name }} --public --add-readme
-          
+jobs:
+  create-repo-automation:
+    runs-on: ubuntu-latest
+    steps:
+    - name: gh auth login
+      run: |
+        echo ${{ secrets.PERSONAL_ACCESS_TOKEN }} | gh auth login --with-token
+    - name: create-repo
+      run: |
+        gh repo create jmt-action/${{ inputs.prefix }}-${{ inputs.name }} --public --add-readme
