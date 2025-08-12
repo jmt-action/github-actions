@@ -22,7 +22,8 @@ jobs:
     - name: gh auth login
       run: |
         echo ${{ secrets.PERSONAL_ACCESS_TOKEN }} | gh auth login --with-token
-    - name: create-repo  # output 활용
+    - name: create-repo  
+      id: create-repo # output 활용
       run: |
         gh repo create jmt-action/${{ inputs.prefix }}-${{ inputs.name }} --public --add-readme
     - name: slack
